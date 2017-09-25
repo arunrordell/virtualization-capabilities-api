@@ -16,6 +16,9 @@
        "datastoreName":{
           "type":"string"
        },
+       "hostname": {
+          "type": "string"
+       },
        "newDatastoreName":{
           "type":"string"
        },
@@ -26,7 +29,7 @@
     "required":[
        "messageProperties",
        "credentials",
-       "datastoreName",
+       "hostname",
        "newDatastoreName"
     ]
 }

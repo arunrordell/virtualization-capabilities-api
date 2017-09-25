@@ -9,5 +9,6 @@
     "username": ""
   },
   "datastoreName": "datastore-name",
+  "hostname": "hostname",
   "newDatastoreName": "NEW_NAME"
 }
