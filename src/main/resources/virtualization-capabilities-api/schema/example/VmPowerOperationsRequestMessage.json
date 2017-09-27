@@ -1,0 +1,16 @@
+{
+  "messageProperties": {
+    "timestamp": "2010-01-01T12:00:00Z",
+    "correlationId": "90015098-3cd2-3fb0-9696-3f7d28e17f72",
+    "replyTo": "test"
+  },
+  "powerOperationRequest": {
+    "vmName": "vm-1-1-1-1",
+    "powerOperation": "POWER_ON"
+  },
+  "componentEndpointIds": {
+    "componentUuid": "12345",
+    "endpointUuid": "67890",
+    "credentialUuid": "12356"
+  }
+}

@@ -149,4 +149,18 @@ public class ValidateExamplesTest
         errors = validateSchema(SCHEMA_DIR + jsdName + ".jsd", EXAMPLE_DIR + jsonName + ".json", SCHEMA_DIR);
         assertNull(errors, errors);
     }
+
+    @Test
+    public void vmPowerOperationsValidation() throws Exception
+    {
+        String jsdName = "VmPowerOperationsRequestMessage";
+        String jsonName = "VmPowerOperationsRequestMessage";
+        String errors = validateSchema(SCHEMA_DIR + jsdName + ".jsd", EXAMPLE_DIR + jsonName + ".json", SCHEMA_DIR);
+        assertNull(errors, errors);
+
+        jsdName = "VmPowerOperationsResponseMessage";
+        jsonName = "VmPowerOperationsResponseMessage";
+        errors = validateSchema(SCHEMA_DIR + jsdName + ".jsd", EXAMPLE_DIR + jsonName + ".json", SCHEMA_DIR);
+        assertNull(errors, errors);
+    }
 }

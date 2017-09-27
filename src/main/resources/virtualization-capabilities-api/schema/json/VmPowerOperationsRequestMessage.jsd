@@ -1,0 +1,26 @@
+{
+    "$schema":"http://json-schema.org/draft-04/schema#",
+    "type":"object",
+    "description":"Request to turn off or on virtual machine",
+    "_meta":{
+       "message":"com.dell.cpsd.vcenter.vm.power.operation.request",
+       "version":"1.0"
+    },
+    "properties":{
+       "messageProperties":{
+          "$ref":"MessageProperties.jsd"
+       },
+       "powerOperationRequest":{
+          "$ref":"VmPowerOperationRequest.jsd"
+       },
+       "componentEndpointIds": {
+          "$ref": "ComponentEndpointIds.jsd"
+       }
+    },
+    "required":[
+       "messageProperties",
+       "powerOperationRequest",
+       "componentEndpointIds"
+    ]
+}
+

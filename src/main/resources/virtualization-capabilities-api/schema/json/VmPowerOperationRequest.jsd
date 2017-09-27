@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "javaName":"VmPowerOperationRequest",
+    "type": "object",
+    "properties": {
+        "vmName": {
+           "type": "string"
+        },
+        "hostname": {
+           "type": "string"
+        },
+        "powerOperation": {
+            "enum": [
+               "POWER_OFF",
+               "POWER_ON",
+               "SUSPEND"
+           ],
+           "type": "string"
+        }
+    },
+    "required": [
+       "powerOperation",
+       "vmName"
+    ]
+
+}
