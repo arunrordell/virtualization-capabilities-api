@@ -10,6 +10,9 @@
        "messageProperties":{
           "$ref":"MessageProperties.jsd"
        },
+       "endpointUrl" : {
+          "type" : "string"
+       },
        "powerOperationRequest":{
           "$ref":"VmPowerOperationRequest.jsd"
        },
@@ -19,8 +22,8 @@
     },
     "required":[
        "messageProperties",
+       "endpointUrl",
        "powerOperationRequest",
        "componentEndpointIds"
     ]
 }
-

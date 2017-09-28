@@ -4,6 +4,7 @@
     "correlationId": "90015098-3cd2-3fb0-9696-3f7d28e17f72",
     "replyTo": "test"
   },
+  "endpointUrl" : "https://fake_vcenter",
   "powerOperationRequest": {
     "vmName": "vm-1-1-1-1",
     "powerOperation": "POWER_ON"
