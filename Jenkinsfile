@@ -1,20 +1,10 @@
-UPSTREAM_TRIGGERS = getUpstreamTriggers([
+UPSTREAM_TRIGGERS = [
     "common-dependencies",
     "common-messaging-parent"
-])
-
-properties([[
-    $class: 'BuildBlockerProperty',
-    blockLevel: 'GLOBAL',
-    blockingJobs: UPSTREAM_TRIGGERS.replace(',', '\n'),
-    scanQueueFor: 'ALL',
-    useBuildBlocker: true
-]])
+]
+properties(getBuildProperties(upstreamRepos: UPSTREAM_TRIGGERS))
 
 pipeline {    
-    triggers {
-        upstream(upstreamProjects: UPSTREAM_TRIGGERS, threshold: hudson.model.Result.SUCCESS)
-    }
     agent {
         node {
             label 'maven-builder'
@@ -26,9 +16,7 @@ pipeline {
     }
     options { 
         skipDefaultCheckout()
-        buildDiscarder(logRotator(artifactDaysToKeepStr: '30', artifactNumToKeepStr: '5', daysToKeepStr: '30', numToKeepStr: '5'))
         timestamps()
-        disableConcurrentBuilds()
     }
     tools {
         maven 'linux-maven-3.3.9'
