@@ -10,6 +10,9 @@
         },
         "moduleOptions":{
             "type" : "string"
+        },
+        "componentEndpointIds": {
+            "$ref": "ComponentEndpointIds.jsd"
         }
     },
     "type": "object"
