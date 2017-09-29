@@ -24,17 +24,24 @@
                 "$ref" : "DvsPnicConnection.jsd"
              }
        },
-       "pNicNames": {
+       "dvsnames" : {
           "type": "array",
           "items": {
-            "type": "string"
-         }
-       },
-       "dvsnames": {
-          "type": "array",
-          "items": {
-            "type": "string"
+             "type": "string"
           }
+       },
+       "pNicNames" : {
+          "type": "array",
+          "items": {
+             "type": "string"
+          }
+       },
+       "dvSwitchConfigList" : {
+           "type" : "array",
+              "items" : {
+                "type" : "object",
+                "$ref" : "DvSwitchConfig.jsd"
+           }
        },
        "componentEndpointIds": {
            "$ref": "ComponentEndpointIds.jsd"

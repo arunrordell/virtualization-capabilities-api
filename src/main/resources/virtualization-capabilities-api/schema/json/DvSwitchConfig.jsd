@@ -1,0 +1,15 @@
+{
+  "type" : "object",
+  "properties" : {
+    "switchName": {
+      "type": "string"
+    },
+    "portGroupConfigList" : {
+      "type" : "array",
+       "items" : {
+          "type" : "object",
+          "$ref" : "PortGroupConfig.jsd"
+       }
+    }
+  }
+}

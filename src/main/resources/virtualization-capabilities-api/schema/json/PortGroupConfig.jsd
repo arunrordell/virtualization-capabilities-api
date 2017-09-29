@@ -1,0 +1,17 @@
+{
+  "type" : "object",
+  "properties" : {
+    "portGroupName": {
+      "type": "string"
+    },
+    "ipAddress" : {
+      "type" : "string"
+    },
+    "gatewayIpAddress": {
+      "type": "string"
+    },
+    "subnetMask" : {
+      "type": "string"
+    }
+  }
+}

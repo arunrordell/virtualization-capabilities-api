@@ -7,9 +7,6 @@
   "pNicNames": [
     "pnic-1"
   ],
-  "dvsnames": [
-    "dvs-1"
-  ],
   "credentials":
   {
     "address": "address1"
