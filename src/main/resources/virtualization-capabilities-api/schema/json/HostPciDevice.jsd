@@ -2,6 +2,9 @@
   "type" : "object",
   "javaName" : "HostPciDevice",
   "properties" : {
+    "id" : {
+      "type": "string"
+    },
     "deviceId" : {
       "type" : "string"
     },
