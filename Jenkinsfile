@@ -4,7 +4,13 @@ UPSTREAM_TRIGGERS = [
 ]
 properties(getBuildProperties(upstreamRepos: UPSTREAM_TRIGGERS))
 
-pipeline {    
+pipeline {
+    parameters {
+        choice(choices: 'OFF\nON', description: 'Please select appropriate flag (master and stable branches will always be ON)', name: 'Deploy_Stage')
+    }
+    triggers {
+        upstream(upstreamProjects: UPSTREAM_TRIGGERS, threshold: hudson.model.Result.SUCCESS)
+    }
     agent {
         node {
             label 'maven-builder'
@@ -14,7 +20,7 @@ pipeline {
     environment {
         GITHUB_TOKEN = credentials('github-02')
     }
-    options { 
+    options {
         skipDefaultCheckout()
         timestamps()
     }
@@ -30,13 +36,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                script {
-                    if (env.BRANCH_NAME ==~ /master|stable\/.*/) {
-                        sh "mvn clean deploy -Dmaven.repo.local=.repo"
-                    } else {
-                        sh "mvn clean install -Dmaven.repo.local=.repo"
-                    }
-                }
+                sh "mvn clean install -Dmaven.repo.local=.repo"
             }
         }
         stage('Record Test Results') {
@@ -46,7 +46,7 @@ pipeline {
         }
         stage('SonarQube Analysis') {
             steps {
-                doSonarAnalysis()    
+                doSonarAnalysis()
             }
         }
         stage('Third Party Audit') {
@@ -57,6 +57,11 @@ pipeline {
         stage('PasswordScan') {
             steps {
                 doPwScan()
+            }
+        }
+        stage('Deploy') {
+            steps {
+                doMvnDeploy()
             }
         }
         stage('Github Release') {
@@ -72,7 +77,7 @@ pipeline {
     }
     post {
         always {
-            cleanWorkspace()   
+            cleanWorkspace()
         }
         success {
             successEmail()

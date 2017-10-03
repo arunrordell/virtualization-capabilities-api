@@ -31,7 +31,6 @@ Contribute code and make submissions at the relevant GitHub repository level. Se
 
 ## Community and Support
 
-
 Reach out to us on Slack #symphony channel. Request an invite at http://community.codedellemc.com.
 You can also join [Google Groups] (https://groups.google.com/d/forum/dellemc-symphony) and start a discussion. 
 
@@ -39,3 +38,10 @@ You can also join [Google Groups] (https://groups.google.com/d/forum/dellemc-sym
 See [LICENSE.md]
 
 [licence]:https://github.com/dellemc-symphony/virtualization-capabilities-api/blob/master/LICENSE.md
+
+[slack]: https://codecommunity.slack.com/messages/symphony
+[googlegroups]: https://groups.google.com/forum/#!forum/dellemc-symphony
+[codecommunity]: http://community.codedellemc.com/
+[contributing]: http://dellemc-symphony.readthedocs.io/en/latest/contributingtosymphony.html
+[github]: https://github.com/dellemc-symphony
+[documentation]: https://dellemc-symphony.readthedocs.io/en/latest/

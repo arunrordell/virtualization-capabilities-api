@@ -7,13 +7,13 @@
     <parent>
         <artifactId>root-parent</artifactId>
         <groupId>com.dell.cpsd</groupId>
-        <version>0.2.6</version>
+        <version>1.0.1</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>virtualization-capabilities-api</artifactId>
-    <groupId>com.dell.cpsd.virtualization.capabilities.api</groupId>
-    <version>0.3-SNAPSHOT</version>
+    <groupId>com.dell.cpsd</groupId>
+    <version>1.0.0</version>
 
     <licenses>
         <license>
@@ -29,6 +29,24 @@
             <organization>com.dell.cpsd</organization>
             <organizationUrl>https://github.com/rousef42</organizationUrl>
         </developer>
+        <developer>
+            <name>Brendan Hoey</name>
+            <email>brendan.hoey@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/visionless</organizationUrl>
+        </developer>
+        <developer>
+            <name>Kushagra Mahajan</name>
+            <email>kushagra.mahajan@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/kushagra-mahajan</organizationUrl>
+        </developer>
+        <developer>
+            <name>Val Charry</name>
+            <email>valerie.charry@emc.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/valcharry</organizationUrl>
+        </developer>
     </developers>
 
     <scm>
@@ -42,7 +60,7 @@
             <dependency>
                 <groupId>com.dell.cpsd</groupId>
                 <artifactId>common-dependencies</artifactId>
-                <version>1.2-SNAPSHOT</version>
+                <version>1.2.0</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
@@ -50,15 +68,16 @@
     </dependencyManagement>
 
    <properties>
-        <plugin-maven-compiler-version>3.3</plugin-maven-compiler-version>
+       <plugin-maven-compiler-version>3.3</plugin-maven-compiler-version>
+       <org.jsonschema2pojo.version>0.4.34</org.jsonschema2pojo.version>
     </properties>
 
     <dependencies>
 
         <dependency>
-            <groupId>com.dell.cpsd.common.messaging</groupId>
+            <groupId>com.dell.cpsd</groupId>
             <artifactId>common-rabbitmq</artifactId>
-            <version>1.4-SNAPSHOT</version>
+            <version>2.1.0</version>
         </dependency>
 
         <dependency>
@@ -67,9 +86,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.dell.cpsd.common.messaging</groupId>
+            <groupId>com.dell.cpsd</groupId>
             <artifactId>common-testing</artifactId>
-            <version>1.4-SNAPSHOT</version>
+            <version>2.1.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -117,12 +136,48 @@
             <plugin>
                 <groupId>org.jsonschema2pojo</groupId>
                 <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+                <version>${org.jsonschema2pojo.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.dell.cpsd</groupId>
+                        <artifactId>common-contract-enricher</artifactId>
+                        <version>2.1.0</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>generate-json-model-virtualization-capabilities-api</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>${project.basedir}/src/main/resources/virtualization-capabilities-api/schema/json
+                            </sourceDirectory>
+                            <targetPackage>com.dell.cpsd.virtualization.capabilities.api</targetPackage>
+                            <outputDirectory>${project.build.directory}/generated-sources/virtualization-capabilities-api</outputDirectory>
+                            <removeOldOutput>true</removeOldOutput>
+                            <useLongIntegers>true</useLongIntegers>
+                            <includeConstructors>true</includeConstructors>
+                            <serializable>true</serializable>
+                            <useCommonsLang3>true</useCommonsLang3>
+                            <customAnnotator>com.dell.cpsd.common.contract.enricher.plugins.jsonschema2pojo.MessageAnnotator
+                            </customAnnotator>
+                            <sourceSortOrder>FILES_FIRST</sourceSortOrder>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.jsonschema2pojo</groupId>
+                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
                 <version>0.4.34</version>
                 <dependencies>
                     <dependency>
-                        <groupId>com.dell.cpsd.common.messaging</groupId>
+                        <groupId>com.dell.cpsd</groupId>
                         <artifactId>common-contract-enricher</artifactId>
-                        <version>1.4-SNAPSHOT</version>
+                        <version>2.1.0</version>
                     </dependency>
                 </dependencies>
                 <executions>
@@ -166,12 +221,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.4</version>
-                <executions>
-                    <execution>
-                        <id>default-jar</id>
-                        <phase>none</phase>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -199,6 +248,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <additionalparam>-Xdoclint:none</additionalparam>
+                </configuration>
             </plugin>
         </plugins>
     </build>
