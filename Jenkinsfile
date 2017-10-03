@@ -8,9 +8,6 @@ pipeline {
     parameters {
         choice(choices: 'OFF\nON', description: 'Please select appropriate flag (master and stable branches will always be ON)', name: 'Deploy_Stage')
     }
-    triggers {
-        upstream(upstreamProjects: UPSTREAM_TRIGGERS, threshold: hudson.model.Result.SUCCESS)
-    }
     agent {
         node {
             label 'maven-builder'
