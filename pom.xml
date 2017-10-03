@@ -7,13 +7,17 @@
     <parent>
         <artifactId>root-parent</artifactId>
         <groupId>com.dell.cpsd</groupId>
-        <version>1.0.1</version>
+        <version>1.1.0</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>virtualization-capabilities-api</artifactId>
     <groupId>com.dell.cpsd</groupId>
     <version>1.1.0-SNAPSHOT</version>
+	<description>This repository contains the source code for the virtualization capabilities API. 
+		This repository is used to define a data contract in JSON that is agnostic of the Adapter.
+    </description>
+    <url>https://github.com/dellemc-symphony/virtualization-capabilities-api</url>
 
     <licenses>
         <license>
@@ -23,30 +27,102 @@
     </licenses>
 
     <developers>
-        <developer>
-            <name>Frank Rouse</name>
-            <email>frank.rouse@dell.com</email>
-            <organization>com.dell.cpsd</organization>
-            <organizationUrl>https://github.com/rousef42</organizationUrl>
-        </developer>
-        <developer>
-            <name>Brendan Hoey</name>
-            <email>brendan.hoey@dell.com</email>
-            <organization>com.dell.cpsd</organization>
-            <organizationUrl>https://github.com/visionless</organizationUrl>
-        </developer>
-        <developer>
-            <name>Kushagra Mahajan</name>
-            <email>kushagra.mahajan@dell.com</email>
-            <organization>com.dell.cpsd</organization>
-            <organizationUrl>https://github.com/kushagra-mahajan</organizationUrl>
-        </developer>
-        <developer>
-            <name>Val Charry</name>
-            <email>valerie.charry@emc.com</email>
-            <organization>com.dell.cpsd</organization>
-            <organizationUrl>https://github.com/valcharry</organizationUrl>
-        </developer>
+	 <developer>
+		 <name>Kushagra Mahajan</name>
+		 <email>kushagra.mahajan@dell.com</email>
+		 <organization>com.dell.cpsd</organization>
+		 <organizationUrl>https://github.com/kushagra-mahajan</organizationUrl>
+	 </developer>
+	 <developer>
+		 <name>Jean Evans</name>
+		 <email>pierevans@gmail.com</email>
+		 <organization>com.dell.cpsd</organization>
+		 <organizationUrl>https://github.com/nucklehead</organizationUrl>
+	 </developer>
+	 <developer>
+		 <name>Catherine Fu</name>
+		 <email>catherine.fu@vce.com</email>
+		 <organization>com.dell.cpsd</organization>
+		 <organizationUrl>https://github.com/xhfu</organizationUrl>
+	 </developer>
+	 <developer>
+		 <name>Massarrah Tannous</name>
+		 <email>massarrah.tannous@dell.com</email>
+		 <organization>com.dell.cpsd</organization>
+		 <organizationUrl>https://github.com/mtannous</organizationUrl>
+	 </developer>
+	 <developer>
+		 <name>Jack Kenefick</name>
+		 <email>Jack.Kenefick@dell.com</email>
+		 <organization>com.dell.cpsd</organization>
+		 <organizationUrl>https://github.com/jkenefick</organizationUrl>
+	 </developer>
+	 <developer>
+		 <name>Jeff Cheng</name>
+		 <email>jeffery.cheng@dell.com</email>
+		 <organization>com.dell.cpsd</organization>
+		 <organizationUrl>https://github.com/jccheng78</organizationUrl>
+	 </developer>
+	 <developer>
+		 <name>Desmond Collins</name>
+		 <email>desmond.collins@dell.com</email>
+		 <organization>com.dell.cpsd</organization>
+		 <organizationUrl>https://github.com/giddyelysium</organizationUrl>
+	 </developer>
+	 <developer>
+		 <name>Val Charry</name>
+		 <email>valerie.charry@emc.com</email>
+		 <organization>com.dell.cpsd</organization>
+		 <organizationUrl>https://github.com/valcharry</organizationUrl>
+	 </developer>
+	 <developer>
+		 <name>Phani Kalagara</name>
+		 <email>phani.kalagara@dell.com</email>
+		 <organization>com.dell.cpsd</organization>
+		 <organizationUrl>https://github.com/kalagp</organizationUrl>
+	 </developer>
+	 <developer>
+		 <name>Frank Rouse</name>
+		 <email>frank.rouse@dell.com</email>
+		 <organization>com.dell.cpsd</organization>
+		 <organizationUrl>https://github.com/rousef42</organizationUrl>
+	 </developer>
+	 <developer>
+		 <name>Purna Chamala</name>
+		 <email>purna.chamala@dell.com</email>
+		 <organization>com.dell.cpsd</organization>
+		 <organizationUrl>https://github.com/chamap1</organizationUrl>
+	 </developer>
+	 <developer>
+		 <name>Nicholas Aquino</name>
+		 <email>nicholas.jay.aquino@gmail.com</email>
+		 <organization>com.dell.cpsd</organization>
+		 <organizationUrl>https://github.com/nick-aquino</organizationUrl>
+	 </developer>
+	 <developer>
+		 <name>Peter Schami</name>
+		 <email>peter_schami@dell.com</email>
+		 <organization>com.dell.cpsd</organization>
+		 <organizationUrl>https://github.com/pschami</organizationUrl>
+	 </developer>
+	 <developer>
+		 <name>Stephen Knight</name>
+		 <email>stephen.knight@dell.com</email>
+		 <organization>com.dell.cpsd</organization>
+		 <organizationUrl>https://github.com/sknightvce</organizationUrl>
+	 </developer>
+	 <developer>
+		 <name>Robert Dubisz</name>
+		 <email>Robert.Dubisz@dell.com</email>
+		 <organization>com.dell.cpsd</organization>
+		 <organizationUrl>https://github.com/RobertDubiszDell</organizationUrl>
+	 </developer>
+	 <developer>
+		 <name>Megan Grasso</name>
+		 <email>megan.grasso@dell.com</email>
+		 <organization>com.dell.cpsd</organization>
+		 <organizationUrl>https://github.com/grassm3</organizationUrl>
+	 </developer>
     </developers>
 
     <scm>
