@@ -1,0 +1,12 @@
+{
+  "type" : "object",
+  "javaName" : "HostScsiDisk",
+  "properties" : {
+    "displayName" : {
+      "type" : "string"
+    },
+    "ssd" : {
+      "type" : "boolean"
+    }
+  }
+}

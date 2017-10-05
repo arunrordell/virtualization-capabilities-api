@@ -1,0 +1,13 @@
+{
+  "type" : "object",
+  "javaName" : "HostStorageDeviceInfo",
+  "properties" : {
+    "scsiLun" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "$ref" : "HostScsiDisk.jsd"
+      }
+    }
+  }
+}

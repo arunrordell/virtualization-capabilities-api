@@ -9,6 +9,10 @@
     "hostDateTimeInfo" : {
       "type" : "object",
       "$ref" : "HostDateTimeInfo.jsd"
+    },
+    "storageDevice" : {
+      "type" : "object",
+      "$ref" : "HostStorageDeviceInfo.jsd"
     }
   }
 }
