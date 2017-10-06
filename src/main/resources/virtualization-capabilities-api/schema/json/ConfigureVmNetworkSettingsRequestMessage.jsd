@@ -1,0 +1,36 @@
+{
+    "$schema":"http://json-schema.org/draft-04/schema#",
+    "type":"object",
+    "description":"Request to configure network settings of a VM",
+    "_meta":{
+       "message":"com.dell.cpsd.vcenter.configure.vm.network.settings.request",
+       "version":"1.0"
+    },
+    "properties":{
+       "messageProperties":{
+          "$ref":"MessageProperties.jsd"
+       },
+       "hostname":{
+            "type":"string"
+       },
+       "vmName":{
+          "type":"string"
+       },
+       "endpointUrl": {
+          "type":"string"
+       },
+       "componentEndpointIds": {
+          "$ref": "ComponentEndpointIds.jsd"
+       },
+       "networkSettingsMap" : {
+          "javaType": "java.util.Map<String,String>"
+       }
+    },
+    "required":[
+       "messageProperties",
+       "hostname",
+       "vmName",
+       "endpointUrl",
+       "componentEndpointIds"
+    ]
+}

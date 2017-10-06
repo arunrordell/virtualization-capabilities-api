@@ -163,4 +163,18 @@ public class ValidateExamplesTest
         errors = validateSchema(SCHEMA_DIR + jsdName + ".jsd", EXAMPLE_DIR + jsonName + ".json", SCHEMA_DIR);
         assertNull(errors, errors);
     }
+
+    @Test
+    public void vmConfigureNetworkSettingsValidation() throws Exception
+    {
+        String jsdName = "ConfigureVmNetworkSettingsRequestMessage";
+        String jsonName = "ConfigureVmNetworkSettingsRequestMessage";
+        String errors = validateSchema(SCHEMA_DIR + jsdName + ".jsd", EXAMPLE_DIR + jsonName + ".json", SCHEMA_DIR);
+        assertNull(errors, errors);
+
+        jsdName = "ConfigureVmNetworkSettingsResponseMessage";
+        jsonName = "ConfigureVmNetworkSettingsResponseMessage";
+        errors = validateSchema(SCHEMA_DIR + jsdName + ".jsd", EXAMPLE_DIR + jsonName + ".json", SCHEMA_DIR);
+        assertNull(errors, errors);
+    }
 }

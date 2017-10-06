@@ -1,0 +1,15 @@
+{
+  "messageProperties": {
+    "timestamp": "2010-01-01T12:00:00Z",
+    "correlationId": "90015098-3cd2-3fb0-9696-3f7d28e17f72",
+    "replyTo": "test"
+  },
+  "hostname": "host01.test.cpsd.com",
+  "vmName": "vm-01-test",
+  "endpointUrl": "test-.com",
+  "componentEndpointIds": {
+    "componentUuid": "12345",
+    "endpointUuid": "23456",
+    "credentialUuid": "34567"
+  }
+}

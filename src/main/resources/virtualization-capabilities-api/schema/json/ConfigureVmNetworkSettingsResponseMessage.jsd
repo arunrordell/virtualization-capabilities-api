@@ -1,0 +1,25 @@
+{
+    "$schema":"http://json-schema.org/draft-04/schema#",
+    "type":"object",
+    "description":"Configure Virtual Machine Network Settings response message.",
+    "_meta":{
+       "message":"com.dell.cpsd.vcenter.configure.vm.network.settings.response",
+       "version":"1.0"
+    },
+    "properties":{
+       "messageProperties":{
+          "$ref":"MessageProperties.jsd"
+       },
+       "status": {
+           "enum": [
+               "SUCCESS",
+               "FAILED"
+           ],
+           "type": "string"
+       }
+    },
+    "required":[
+       "messageProperties",
+       "status"
+    ]
+}
