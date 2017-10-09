@@ -1,0 +1,39 @@
+{
+    "$schema":"http://json-schema.org/draft-04/schema#",
+    "type":"object",
+    "description":"Request Message that contains remote bash commands to be executed using JSCH",
+    "_meta":{
+       "message":"com.dell.cpsd.vcenter.remote.command.execution.request",
+       "version":"1.0"
+    },
+    "properties":{
+       "messageProperties":{
+          "$ref":"MessageProperties.jsd"
+       },
+       "remoteHost":{
+          "type":"string"
+       },
+       "componentEndpointIds": {
+          "$ref": "ComponentEndpointIds.jsd"
+       },
+       "remoteCommands": {
+          "type": "array",
+          "items": {
+             "type": "string"
+          }
+       },
+       "osType": {
+         "enum": [
+            "LINUX",
+            "WINDOWS"
+         ],
+         "type": "string"
+       }
+    },
+    "required":[
+       "messageProperties",
+       "remoteHost",
+       "componentEndpointIds",
+       "remoteCommands"
+    ]
+}

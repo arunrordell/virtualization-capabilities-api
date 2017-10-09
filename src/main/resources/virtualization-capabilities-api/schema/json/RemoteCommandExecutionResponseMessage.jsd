@@ -1,0 +1,31 @@
+{
+    "$schema":"http://json-schema.org/draft-04/schema#",
+    "type":"object",
+    "description":"Response for remote command execution",
+    "_meta":{
+       "message":"com.dell.cpsd.vcenter.remote.command.execution.response",
+       "version":"1.0"
+    },
+    "properties":{
+       "messageProperties":{
+          "$ref":"MessageProperties.jsd"
+       },
+       "status": {
+           "enum": [
+               "SUCCESS",
+               "FAILED"
+           ],
+           "type": "string"
+       },
+       "responseMessages": {
+         "type": "array",
+         "items": {
+           "type": "string"
+         }
+       }
+    },
+    "required":[
+       "messageProperties",
+       "status"
+    ]
+}
