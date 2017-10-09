@@ -17,10 +17,12 @@
           "$ref": "ComponentEndpointIds.jsd"
        },
        "remoteCommands": {
-          "type": "array",
-          "items": {
-             "type": "string"
-          }
+          "enum": [
+             "CHANGE_PASSWORD",
+             "INSTALL_PACKAGE",
+             "IMPORT_FILE"
+          ],
+          "type": "string"
        },
        "osType": {
          "enum": [
