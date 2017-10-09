@@ -16,7 +16,10 @@
        "componentEndpointIds": {
           "$ref": "ComponentEndpointIds.jsd"
        },
-       "remoteCommands": {
+       "vmPasswordUpdateRequest" : {
+          "$ref": "VmPasswordUpdateRequest.jsd"
+       },
+       "remoteCommand": {
           "enum": [
              "CHANGE_PASSWORD",
              "INSTALL_PACKAGE",
@@ -36,6 +39,6 @@
        "messageProperties",
        "remoteHost",
        "componentEndpointIds",
-       "remoteCommands"
+       "remoteCommand"
     ]
 }
