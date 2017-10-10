@@ -10,6 +10,9 @@
     },
     "serialNumber" : {
       "type" : "string"
+    },
+    "canonicalName" : {
+      "type" : "string"
     }
   }
 }
