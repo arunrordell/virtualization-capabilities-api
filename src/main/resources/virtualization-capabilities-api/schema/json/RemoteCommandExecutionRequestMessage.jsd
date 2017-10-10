@@ -22,8 +22,12 @@
        "remoteCommand": {
           "enum": [
              "CHANGE_PASSWORD",
-             "INSTALL_PACKAGE",
-             "IMPORT_FILE"
+             "INSTALL_PACKAGE_MDM",
+             "INSTALL_PACKAGE_SDS",
+             "INSTALL_PACKAGE_SDS_LIA",
+             "IMPORT_FILE",
+             "UPLOAD_FILE",
+             "DOWNLOAD_FILE"
           ],
           "type": "string"
        },
