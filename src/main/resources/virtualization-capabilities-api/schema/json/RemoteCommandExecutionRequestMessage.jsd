@@ -27,7 +27,8 @@
              "INSTALL_PACKAGE_SDS_LIA",
              "IMPORT_FILE",
              "UPLOAD_FILE",
-             "DOWNLOAD_FILE"
+             "DOWNLOAD_FILE",
+             "PERFORMANCE_TUNING_SVM"
           ],
           "type": "string"
        },
