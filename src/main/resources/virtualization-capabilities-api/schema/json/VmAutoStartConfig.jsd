@@ -1,0 +1,11 @@
+{
+  "type" : "object",
+  "properties" : {
+    "autoStartPowerInfo": {
+      "$ref": "AutoStartPowerInfo.jsd"
+    },
+    "autoStartDefaults" : {
+      "$ref" : "AutoStartDefaults.jsd"
+    }
+  }
+}

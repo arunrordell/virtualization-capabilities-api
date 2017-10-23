@@ -30,6 +30,12 @@
        },
        "componentEndpointIds": {
           "$ref": "ComponentEndpointIds.jsd"
+       },
+       "configureAutoStart": {
+          "type": "boolean"
+       },
+       "vmAutoStartConfig" : {
+          "$ref" : "VmAutoStartConfig.jsd"
        }
     },
     "required":[

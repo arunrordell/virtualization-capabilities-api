@@ -1,0 +1,33 @@
+{
+  "type" : "object",
+  "properties" : {
+    "startAction" : {
+      "enum" : [
+         "PowerOn",
+         "PowerOff"
+      ],
+      "type" : "string"
+    },
+    "startDelay" : {
+      "type" : "integer"
+    },
+    "startOrder" : {
+      "type" : "integer"
+    },
+    "stopDelay" : {
+      "type" : "integer"
+    },
+    "stopAction" : {
+      "enum" : [
+        "SystemDefault"
+      ],
+      "type" : "string"
+    },
+    "waitForHeartBeat" : {
+      "enum" : [
+        "SystemDefault"
+      ],
+      "type" : "string"
+    }
+  }
+}
