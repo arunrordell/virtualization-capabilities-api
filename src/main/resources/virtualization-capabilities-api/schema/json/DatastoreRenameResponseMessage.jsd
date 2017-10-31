@@ -16,6 +16,9 @@
                "FAILED"
            ],
            "type": "string"
+       },
+       "datastoreName": {
+          "type": "string"
        }
     },
     "required":[
