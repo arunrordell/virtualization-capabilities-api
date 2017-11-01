@@ -1,5 +1,6 @@
 [![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
 [![Build Status](https://travis-ci.org/dellemc-symphony/virtualization-capabilities-api.svg?branch=master)](https://travis-ci.org/dellemc-symphony/virtualization-capabilities-api)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5fcc8ab8fac3440baece111ae807258e)](https://www.codacy.com/app/svc-pebuildrelease/virtualization-capabilities-api?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dellemc-symphony/virtualization-capabilities-api&amp;utm_campaign=Badge_Grade)
 [![Slack](http://community.codedellemc.com/badge.svg)](https://codecommunity.slack.com/messages/symphony)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.dell.cpsd/virtualization-capabilities-api/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.dell.cpsd/virtualization-capabilities-api)
 [![Semver](http://img.shields.io/SemVer/2.0.0.png)](http://semver.org/spec/v2.0.0.html)
