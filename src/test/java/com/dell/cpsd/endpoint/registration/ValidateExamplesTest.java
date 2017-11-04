@@ -177,4 +177,18 @@ public class ValidateExamplesTest
         errors = validateSchema(SCHEMA_DIR + jsdName + ".jsd", EXAMPLE_DIR + jsonName + ".json", SCHEMA_DIR);
         assertNull(errors, errors);
     }
+
+    @Test
+    public void vcenterInventoryRequestValidation() throws Exception
+    {
+        String jsdName = "VCenterInventoryRequestMessage";
+        String jsonName = "VCenterInventoryRequestMessage";
+        String errors = validateSchema(SCHEMA_DIR + jsdName + ".jsd", EXAMPLE_DIR + jsonName + ".json", SCHEMA_DIR);
+        assertNull(errors, errors);
+
+        jsdName = "VCenterInventoryResponseMessage";
+        jsonName = "VCenterInventoryResponseMessage";
+        errors = validateSchema(SCHEMA_DIR + jsdName + ".jsd", EXAMPLE_DIR + jsonName + ".json", SCHEMA_DIR);
+        assertNull(errors, errors);
+    }
 }

@@ -1,0 +1,19 @@
+{
+  "type" : "object",
+  "properties" : {
+    "dvSwitchName" : {
+      "type" : "string"
+    },
+    "dvPortGroups" : {
+      "type" : "array",
+      "items" : {
+         "$ref" : "DvPortGroupInventory.jsd",
+         "type" : "object"
+      }
+    }
+  },
+  "required" : [
+     "dvSwitchName",
+     "dvPortGroups"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "type" : "object",
+  "properties" : {
+    "esxiManagementVlanId" : {
+      "type" : "string"
+    },
+    "domainName" : {
+      "type" : "string"
+    },
+    "dvSwitches" : {
+      "type" : "array",
+      "items" : {
+         "$ref" : "DvSwitchInventory.jsd",
+         "type" : "object"
+      }
+    },
+    "dnsServers" : {
+      "type" : "array",
+      "items" : {
+         "type" : "string"
+      }
+    },
+    "ntpServers" : {
+      "type" : "array",
+      "items" : {
+         "type" : "string"
+      }
+    },
+    "hosts" : {
+      "type" : "array",
+      "items" : {
+         "$ref" : "HostInventory.jsd",
+         "type" : "object"
+      }
+    }
+  },
+  "required" : [
+     "esxiManagementVlanId",
+     "domainName",
+     "dvSwitches",
+     "dnsServers",
+     "ntpServers",
+     "hosts"
+  ]
+}

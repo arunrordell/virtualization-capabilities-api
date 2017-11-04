@@ -1,0 +1,79 @@
+{
+  "messageProperties": {
+    "timestamp": "2010-01-01T12:00:00Z",
+    "correlationId": "1234",
+    "replyTo": "N/A"
+  },
+  "vCenterInventory": {
+    "dvSwitches": [
+      {
+        "dvSwitchName": "dvswitch0-cvcsa",
+        "dvPortGroups": [
+          {
+            "dvPortGroupName": "fpr1-ft-107"
+          },
+          {
+            "dvPortGroupName": "fpr1-vmotion"
+          },
+          {
+            "dvPortGroupName": "fpr1-sio-mgmt-1629"
+          },
+          {
+            "dvPortGroupName": "fpr1-esx-mgmt-1628"
+          },
+          {
+            "dvPortGroupName": "dvswitch0-cvcsa-DVUplinks-23"
+          }
+        ]
+      },
+      {
+        "dvSwitchName": "dvswitch1",
+        "dvPortGroups": [
+          {
+            "dvPortGroupName": "mpr1-sio-data1-152"
+          },
+          {
+            "dvPortGroupName": "dvswitch1-DVUplinks-29"
+          }
+        ]
+      },
+      {
+        "dvSwitchName": "dvswitch2",
+        "dvPortGroups": [
+          {
+            "dvPortGroupName": "mpr1-sio-data2-160"
+          },
+          {
+            "dvPortGroupName": "dvswitch2-DVUplinks-32"
+          }
+        ]
+      }
+    ],
+    "domainName": "lab.vce.com",
+    "dnsServers": [
+      "10.136.112.228",
+      "10.239.128.100"
+    ],
+    "ntpServers": [
+      "10.136.112.220",
+      "10.239.128.100"
+    ],
+    "esxiManagementVlanId": "1628",
+    "hosts": [
+      {
+        "hostname": "host-name.lab.vce.com",
+        "model": "R730 Base",
+        "biosVersion": "2.2.5",
+        "esxiBuildNumber": "4192238",
+        "scsiDisks": [
+          {
+            "displayName": "Local ATA Disk (t10.ATA_____SATADOM2DML_3SE__________________________TW00T4M4482936AV0010)",
+            "ssd": true,
+            "serialNumber": "unavailable",
+            "canonicalName": "t10.ATA_____SATADOM2DML_3SE__________________________TW00T4M4482936AV0010"
+          }
+        ]
+      }
+    ]
+  }
+}

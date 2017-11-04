@@ -1,0 +1,25 @@
+{
+    "$schema" : "http://json-schema.org/draft-04/schema#",
+    "type" : "object",
+    "description" : "VCenter Inventory Request Message",
+    "_meta" : {
+       "message" : "com.dell.cpsd.vcenter.inventory.request",
+       "version" : "1.0"
+    },
+    "properties" : {
+       "messageProperties" : {
+          "$ref" : "MessageProperties.jsd"
+       },
+       "endpointUrl" : {
+          "type" : "string"
+       },
+       "componentEndpointIds" : {
+          "$ref" : "ComponentEndpointIds.jsd"
+       }
+    },
+    "required" : [
+       "messageProperties",
+       "endpointUrl",
+       "componentEndpointIds"
+    ]
+}

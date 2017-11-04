@@ -1,0 +1,31 @@
+{
+  "type" : "object",
+  "properties" : {
+    "hostname" : {
+      "type" : "string"
+    },
+    "model" : {
+      "type" : "string"
+    },
+    "biosVersion" : {
+      "type" : "string"
+    },
+    "esxiBuildNumber" : {
+      "type" : "string"
+    },
+    "scsiDisks" : {
+      "type" : "array",
+      "items" : {
+         "$ref" : "HostScsiDiskInventory.jsd",
+         "type" : "object"
+      }
+    }
+  },
+  "required" : [
+     "hostname",
+     "model",
+     "biosVersion",
+     "esxiBuildNumber",
+     "scsiDisks"
+  ]
+}

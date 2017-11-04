@@ -1,0 +1,24 @@
+{
+  "type" : "object",
+  "javaName" : "HostScsiDiskInventory",
+  "properties" : {
+    "displayName" : {
+      "type" : "string"
+    },
+    "serialNumber" : {
+      "type" : "string"
+    },
+    "canonicalName" : {
+      "type" : "string"
+    },
+    "ssd" : {
+      "type" : "boolean"
+    }
+  },
+  "required" : [
+     "displayName",
+     "serialNumber",
+     "canonicalName",
+     "ssd"
+  ]
+}
