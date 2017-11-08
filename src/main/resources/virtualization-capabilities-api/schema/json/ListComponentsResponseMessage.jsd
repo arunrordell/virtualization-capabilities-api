@@ -21,6 +21,9 @@
         "type" : "object",
         "$ref" : "VCenterComponentDetails.jsd"
       }
+    },
+    "description" : {
+        "type" : "string"
     }
   },
   "required":[

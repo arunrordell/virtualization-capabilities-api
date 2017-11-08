@@ -19,6 +19,9 @@
        },
        "datastoreName": {
           "type": "string"
+       },
+       "description" : {
+          "type" : "string"
        }
     },
     "required":[

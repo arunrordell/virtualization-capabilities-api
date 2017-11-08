@@ -12,6 +12,9 @@
        },
        "vCenterInventory" : {
            "$ref" : "VCenterInventory.jsd"
+       },
+       "description" : {
+           "type" : "string"
        }
     },
     "required" : [
